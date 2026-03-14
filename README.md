@@ -2,7 +2,7 @@
 
 > Sync AI agent instruction files via symlinks - maintain a single source of truth across Claude, Cursor, Copilot, Windsurf, and 15+ AI coding tools.
 
-[![npm version](https://img.shields.io/npm/v/agentssync.svg)](https://www.npmjs.com/package/agentssync)
+[![npm version](https://img.shields.io/npm/v/@mrtungdev/agentssync.svg)](https://www.npmjs.com/package/@mrtungdev/agentssync)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## The Problem
