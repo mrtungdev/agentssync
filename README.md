@@ -246,7 +246,7 @@ $ agentssync --dry-run
 
 ```bash
 # Clone the repo
-git clone https://github.com/user/agentssync.git
+git clone https://github.com/mrtungdev/agentssync.git
 cd agentssync
 
 # Install dependencies
@@ -291,7 +291,7 @@ Contributions are welcome! Here's how you can help:
 
 ### Reporting Issues
 
-- Use [GitHub Issues](https://github.com/user/agentssync/issues)
+- Use [GitHub Issues](https://github.com/mrtungdev/agentssync/issues)
 - Include your OS, Node.js version, and steps to reproduce
 
 ### Pull Request Guidelines
@@ -310,11 +310,6 @@ Contributions are welcome! Here's how you can help:
 - [ ] VSCode extension
 - [ ] Bi-directional sync detection
 - [ ] Template system for instruction files
-
-## Related Projects
-
-- [vercel-labs/skills](https://github.com/vercel-labs/skills) - Agent skills management
-- [cursor-rules](https://github.com/PatrickJS/awesome-cursorrules) - Curated cursor rules
 
 ## License
 

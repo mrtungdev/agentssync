@@ -29,26 +29,37 @@ export async function selectTargetAgents(
 ): Promise<AgentConfig[] | symbol> {
   const existingAgentIds = new Set(existingFiles.map((f) => f.agent.id));
 
-  const options = availableAgents
-    .filter((agent) => agent.id !== sourceAgent.id)
-    .map((agent) => {
-      const exists = existingAgentIds.has(agent.id);
-      const existingFile = existingFiles.find((f) => f.agent.id === agent.id);
+  // Default checked agents (excluding source agent)
+  const defaultCheckedIds = new Set(["claude", "codex", "agents"]);
 
-      return {
-        label: agent.name,
-        value: agent,
-        hint: exists
-          ? existingFile?.isSymlink
-            ? pc.cyan("symlink exists")
-            : pc.yellow("file exists")
-          : agent.primaryFile,
-      };
-    });
+  const filteredAgents = availableAgents.filter(
+    (agent) => agent.id !== sourceAgent.id
+  );
+
+  const options = filteredAgents.map((agent) => {
+    const exists = existingAgentIds.has(agent.id);
+    const existingFile = existingFiles.find((f) => f.agent.id === agent.id);
+
+    return {
+      label: agent.name,
+      value: agent,
+      hint: exists
+        ? existingFile?.isSymlink
+          ? pc.cyan("symlink exists")
+          : pc.yellow("file exists")
+        : agent.primaryFile,
+    };
+  });
+
+  // Set initial values to default checked agents
+  const initialValues = filteredAgents.filter((agent) =>
+    defaultCheckedIds.has(agent.id)
+  );
 
   return p.multiselect({
     message: "Select target agents to create symlinks:",
     options,
+    initialValues,
     required: false,
   });
 }
