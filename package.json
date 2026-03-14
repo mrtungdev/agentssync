@@ -1,6 +1,6 @@
 {
   "name": "@mrtungdev/agentssync",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Sync AI agent instruction files via symlinks (CLAUDE.md, AGENTS.md, .cursorrules, etc.)",
   "type": "module",
   "bin": {
@@ -48,8 +48,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/user/agentssync.git"
+    "url": "git+https://github.com/mrtungdev/agentssync.git"
   },
+  "bugs": {
+    "url": "https://github.com/mrtungdev/agentssync/issues"
+  },
+  "homepage": "https://github.com/mrtungdev/agentssync#readme",
   "dependencies": {
     "@clack/prompts": "^0.9.1",
     "fast-glob": "^3.3.3",
