@@ -1,6 +1,6 @@
 {
   "name": "@mrtungdev/agentssync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sync AI agent instruction files via symlinks (CLAUDE.md, AGENTS.md, .cursorrules, etc.)",
   "type": "module",
   "bin": {
