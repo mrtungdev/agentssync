@@ -2,16 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.1] - 2026-03-14
-
-### Changed
-
-- Update package name to scoped format `@mrtungdev/agentssync`
-- Default checked agents in selection prompt: Claude, Codex, and Universal (AGENTS.md)
-
 ## [1.0.0] - 2026-03-14
-
-### Added
 
 - Initial release
 - Support for multiple AI agent instruction files:
