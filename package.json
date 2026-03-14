@@ -1,0 +1,61 @@
+{
+  "name": "agentssync",
+  "version": "1.0.0",
+  "description": "Sync AI agent instruction files via symlinks (CLAUDE.md, AGENTS.md, .cursorrules, etc.)",
+  "type": "module",
+  "bin": {
+    "agentssync": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "symlink",
+    "claude",
+    "cursor",
+    "copilot",
+    "windsurf",
+    "agents",
+    "cli",
+    "agentssync"
+  ],
+  "author": "Mr Tung",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/agentssync.git"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "fast-glob": "^3.3.3",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0"
+  }
+}
